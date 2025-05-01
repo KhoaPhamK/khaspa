@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kha Spa Thú Cưng</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="bg-red-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="/mnt/data/LOGOKHA.jpg" alt="Kha Spa Logo" class="h-12 w-12 rounded-full">
+        <div class="text-2xl font-bold">Kha Spa Thú Cưng</div>
+      </div>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#services" class="hover:underline">Dịch Vụ</a></li>
+          <li><a href="#booking" class="hover:underline">Đặt Lịch</a></li>
+          <li><a href="#contact" class="hover:underline">Liên Hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="bg-red-100 py-12 text-center">
+    <h1 class="text-4xl font-bold mb-4">Chăm sóc thú cưng yêu thương như chính gia đình!</h1>
+    <p class="text-lg">Tắm gội, cắt tỉa, lưu trú, thức ăn & phụ kiện</p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-12 container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Dịch Vụ Của Chúng Tôi</h2>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="p-6 bg-red-50 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">Tắm Gội</h3>
+        <p>Giúp thú cưng sạch sẽ, thơm tho với sản phẩm an toàn.</p>
+      </div>
+      <div class="p-6 bg-red-50 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">Cắt Tỉa</h3>
+        <p>Phong cách đẹp mắt, dễ thương, theo yêu cầu riêng.</p>
+      </div>
+      <div class="p-6 bg-red-50 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">Khách Sạn Thú Cưng</h3>
+        <p>Không gian lưu trú tiện nghi, sạch sẽ, an toàn tuyệt đối.</p>
+      </div>
+      <div class="p-6 bg-red-50 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">Thức Ăn & Phụ Kiện</h3>
+        <p>Đa dạng sản phẩm thức ăn, đồ chơi, phụ kiện chính hãng.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking" class="py-12 bg-red-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Đặt Lịch Ngay</h2>
+      <form class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow">
+        <div class="mb-4">
+          <label class="block text-gray-700">Tên của bạn</label>
+          <input type="text" class="w-full p-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Số điện thoại</label>
+          <input type="text" class="w-full p-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Dịch vụ muốn đặt</label>
+          <select class="w-full p-2 border rounded">
+            <option>Tắm Gội</option>
+            <option>Cắt Tỉa</option>
+            <option>Khách Sạn Thú Cưng</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-red-600 text-white p-2 rounded hover:bg-red-700">Gửi Đặt Lịch</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-12 container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Liên Hệ Với Chúng Tôi</h2>
+    <div class="text-center">
+      <p>📞 Hotline: 0909 123 456</p>
+      <p>📍 Địa chỉ: Tây Ninh, Việt Nam</p>
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Kha+Spa+Th%C3%BA+C%C6%B0ng,T%C3%A2y+Ninh,Vietnam" width="300" height="200" class="mx-auto mt-4" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-red-600 text-white text-center p-4">
+    © 2025 Kha Spa Thú Cưng. All rights reserved.
+  </footer>
+
+  <!-- Messenger Chat plugin -->
+  <div id="fb-root"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "100063702473872");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v14.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+</body>
+</html>
+Add index.html
